@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#05091b">
+<meta name="description" content="Official EPIC Network / Echo Protocol Z development milestones and Mainnet deployment status.">
+<link rel="canonical" href="https://echoprotocolz.github.io/epic_network_website/mainnet-status.html">
+<title>Mainnet Deployment Updates | EPIC Network</title>
+<style>
+:root{color-scheme:dark;--bg:#05091b;--cyan:#00dcff;--purple:#a843ff;--muted:#b7c7eb}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top,#152456 0%,#05091b 60%);color:#fff;font:16px/1.65 Arial,Helvetica,sans-serif}a{color:var(--cyan)}header{border-bottom:1px solid #244b88;background:#05091be8;padding:18px 24px}nav{max-width:1050px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}nav a{text-decoration:none}.brand{font-weight:900;font-size:20px;color:#fff}.brand span{color:var(--cyan)}main{max-width:1050px;margin:auto;padding:64px 22px 90px}.eyebrow{text-transform:uppercase;letter-spacing:3px;color:var(--cyan);font-size:12px;font-weight:700}h1{font-size:clamp(38px,7vw,74px);line-height:1.06;margin:14px 0;background:linear-gradient(90deg,#fff,var(--cyan),var(--purple));color:transparent;background-clip:text}h2{font-size:28px;margin:44px 0 14px}p{color:var(--muted)}.lead{font-size:19px;max-width:760px}.status{display:inline-block;border:1px solid #ffb454;color:#ffd391;background:#61401740;padding:8px 15px;border-radius:30px;font-weight:bold}.panel{background:linear-gradient(145deg,#111d49,#0a0b23);border:1px solid #2362ae;border-radius:18px;padding:25px;margin-top:22px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}.item{border:1px solid #274e86;border-radius:14px;padding:18px;background:#07132c}.item strong{display:block;margin-bottom:8px}.tag{display:inline-block;font-size:12px;font-weight:bold;border-radius:20px;padding:3px 9px;background:#1c3c52;color:#a4eeff}.tag.pending{background:#423422;color:#ffd391}.date{font-size:13px;color:#9fb4db}.notice{border-left:3px solid var(--cyan);padding-left:17px}footer{border-top:1px solid #244b88;padding:30px 20px;text-align:center;color:#9fb4db;font-size:13px}
+</style>
+</head>
+<body>
+<header><nav><a class="brand" href="./">EPIC <span>NETWORK</span> · POWERED BY ECHO</a><a href="./">← Back to homepage</a></nav></header>
+<main>
+<div class="eyebrow">Official development progress</div>
+<h1>Mainnet Deployment Updates</h1>
+<p class="lead">Follow Echo Protocol Z's path toward Mainnet. We publish verified development milestones, outstanding security work, and deployment announcements here.</p>
+<div class="status">Pre-deployment security testing · Launch date TBA</div>
+<p class="date">Last development update: November 9, 2026</p>
+<section class="panel" aria-label="Deployment status"><h2 style="margin-top:0">Current status</h2>
+<p>Echo Protocol Z is under active development and local security testing. Successful tests are not an independent audit, production deployment, or guarantee of safety. No Echo Protocol Z Mainnet launch date has been announced.</p>
+<p class="notice"><strong>Important:</strong> Some earlier ECHO-related contracts may exist on Polygon Mainnet. Their existence does not mean the new Echo Protocol Z architecture is deployed or available for public use.</p></section>
+<h2>Development milestones</h2>
+<div class="grid">
+<div class="item"><strong>V3/V4 dual-proof authorization</strong><span class="tag">Locally tested</span><p>Real proof verification, checkpoint binding, and replay-rejection scenarios passed in the development test suite.</p></div>
+<div class="item"><strong>Geographic policy controls</strong><span class="tag">Locally tested</span><p>Geographic authorization, administrative migration, and rollback scenarios passed.</p></div>
+<div class="item"><strong>ECHO staking integration</strong><span class="tag">Locally tested</span><p>Proof-authorized approval and 1,000 ECHO staking completed using local test contracts.</p></div>
+<div class="item"><strong>Cumulative spending budget</strong><span class="tag">Locally tested</span><p>The 1,000 ECHO budget was recorded; an over-budget staking attempt was rejected with rollback assertions.</p></div>
+<div class="item"><strong>ERC-20 allowance bypass hardening</strong><span class="tag pending">In progress</span><p>Addressing transfers initiated by previously approved spenders outside authorized account executions.</p></div>
+<div class="item"><strong>Full security review and release verification</strong><span class="tag pending">Pending</span><p>Broader adversarial testing, independent review, and deployment readiness checks remain required.</p></div>
+<div class="item"><strong>Echo Protocol Z Mainnet deployment</strong><span class="tag pending">Not announced</span><p>Deployment details and verified contract addresses will be posted only after confirmation.</p></div>
+</div>
+<h2>Development log</h2>
+<div class="panel"><div class="date">November 9, 2026 · Local development update</div><h3>Spending-limit enforcement integration tested</h3><p>The Echo Protocol Z local test suite passed its existing integration tests. An additional proof-authorized staking test confirmed cumulative ECHO spending accounting, rejection of spending beyond the configured budget, and atomic rollback checks. ERC-20 allowance security remains an open hardening item.</p></div>
+<h2>Follow the launch</h2>
+<p>Watch this page for dated updates. You can also <a href="./#join">join the EPIC Network newsletter</a> or review the <a href="https://github.com/echoprotocolZ/epic_network_website">website repository on GitHub</a>.</p>
+<p class="date">No token sale, launch countdown, security certification, or Mainnet deployment is implied by this status page.</p>
+</main><footer>© 2026 EPIC Network · Powered by ECHO · Development information, not an investment solicitation.</footer>
+</body></html>
