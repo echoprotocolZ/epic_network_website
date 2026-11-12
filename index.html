@@ -588,6 +588,37 @@ footer{padding:35px 24px;text-align:center;border-top:1px solid #244b88;color:#9
   </div>
 </section>
 
+<section id="launch-preview-countdown" aria-label="EPIC Network launch preview countdown" style="padding:35px 18px;background:linear-gradient(135deg,#090b23,#22104d 55%,#091c43);text-align:center;border-top:1px solid #a74cff;border-bottom:1px solid #00dfff;color:white">
+  <div style="max-width:860px;margin:auto">
+    <div style="font-size:13px;letter-spacing:3px;color:#65e9ff;font-weight:800">EPIC NETWORK · ECHO PROTOCOL Z</div>
+    <h2 style="font-size:clamp(27px,5vw,48px);margin:12px 0;color:#fff;text-shadow:0 0 22px #9b4dff">LAUNCH PREVIEW COUNTDOWN</h2>
+    <p style="color:#e7d6ff;margin:0 0 20px">November 15, 2026 · 3:00 PM PST</p>
+    <div id="epic-live-countdown" role="timer" aria-label="Time remaining until launch preview" style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+      <div style="min-width:105px;padding:16px;border:1px solid #bb4aff;border-radius:14px;background:#0a153d"><strong id="epic-days" style="display:block;font-size:clamp(34px,6vw,56px);color:#fff">--</strong><span>DAYS</span></div>
+      <div style="min-width:105px;padding:16px;border:1px solid #00dfff;border-radius:14px;background:#0a153d"><strong id="epic-hours" style="display:block;font-size:clamp(34px,6vw,56px);color:#fff">--</strong><span>HOURS</span></div>
+      <div style="min-width:105px;padding:16px;border:1px solid #bb4aff;border-radius:14px;background:#0a153d"><strong id="epic-minutes" style="display:block;font-size:clamp(34px,6vw,56px);color:#fff">--</strong><span>MINUTES</span></div>
+      <div style="min-width:105px;padding:16px;border:1px solid #00dfff;border-radius:14px;background:#0a153d"><strong id="epic-seconds" style="display:block;font-size:clamp(34px,6vw,56px);color:#fff">--</strong><span>SECONDS</span></div>
+    </div>
+    <p id="epic-countdown-message" style="color:#8defff;margin-top:18px;font-weight:700">267 security tests passing in the latest reported Hardhat run</p>
+    <p style="font-size:12px;color:#b8b9d6;max-width:690px;margin:12px auto 0">Countdown to the announced preview milestone, not a token sale or authorization to deploy. Echo Protocol Z Mainnet release remains subject to security review and an independent audit.</p>
+  </div>
+</section>
+<script>
+(function () {
+  // November 15, 2026 15:00 PST = 23:00 UTC; fixed instant works in every visitor timezone.
+  const deadline = Date.parse('2026-11-15T15:00:00-08:00');
+  const ids = ['epic-days','epic-hours','epic-minutes','epic-seconds'];
+  function update() {
+    const remaining = Math.max(0, deadline - Date.now());
+    const units = [Math.floor(remaining / 86400000),Math.floor(remaining / 3600000) % 24,Math.floor(remaining / 60000) % 60,Math.floor(remaining / 1000) % 60];
+    ids.forEach((id,i) => { document.getElementById(id).textContent = String(units[i]).padStart(2,'0'); });
+    if (remaining === 0) document.getElementById('epic-countdown-message').textContent = 'The November 15 preview milestone has arrived — check official updates for confirmed announcements.';
+  }
+  update();
+  setInterval(update, 1000);
+})();
+</script>
+
 <div class="hero" id="home">
 <div class="hero-content">
 <div class="orbit"><span>E</span></div>
