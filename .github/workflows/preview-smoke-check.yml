@@ -1,0 +1,45 @@
+name: EPIC preview website checks
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'echo-protocol-z-whitepaper.html'
+      - '.github/workflows/preview-smoke-check.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check source pages and whitepaper link
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s index.html
+          test -s echo-protocol-z-whitepaper.html
+          grep -Fq 'href="echo-protocol-z-whitepaper.html"' index.html
+          grep -Fq 'Version 0.2' echo-protocol-z-whitepaper.html
+          grep -Fq 'Echo Logic' echo-protocol-z-whitepaper.html
+          grep -Fq 'Independent audit' echo-protocol-z-whitepaper.html
+      - name: Verify public GitHub Pages after deployment delay
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://echoprotocolz.github.io/epic_network_website"
+          for attempt in {1..12}; do
+            if curl -fLsS --max-time 20 "$base/" -o /tmp/epic-index.html &&
+               curl -fLsS --max-time 20 "$base/echo-protocol-z-whitepaper.html" -o /tmp/epic-whitepaper.html &&
+               grep -Fq 'echo-protocol-z-whitepaper.html' /tmp/epic-index.html &&
+               grep -Fq 'Version 0.2' /tmp/epic-whitepaper.html &&
+               grep -Fq 'Echo Logic' /tmp/epic-whitepaper.html; then
+              echo "Public homepage and updated whitepaper verified."
+              exit 0
+            fi
+            echo "Public Pages not yet ready; attempt $attempt/12"
+            sleep 20
+          done
+          echo "::error::Public GitHub Pages did not serve the expected content."
+          exit 1
