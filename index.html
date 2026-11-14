@@ -578,56 +578,6 @@ footer{padding:35px 24px;text-align:center;border-top:1px solid #244b88;color:#9
 </header>
 
 <main>
-<section id="pilot-offer-top" aria-label="Founding developer pilot offer" style="padding:24px 18px;text-align:center;background:linear-gradient(100deg,#301044,#17244e,#351735);border-bottom:2px solid #ff891d">
-  <div style="max-width:1000px;margin:auto;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:14px 25px">
-    <div style="text-align:center"><strong style="display:block;color:#ffbf82;font-size:13px;letter-spacing:2px">FOUNDING DEVELOPER PILOT</strong><strong style="display:block;color:white;font-size:clamp(34px,6vw,55px);line-height:1.1">$199 <span style="font-size:16px;color:#e8e5ff">ONE-TIME STARTING PRICE</span></strong></div>
-    <a href="#founding-developer-pilot" style="display:inline-block;background:#ff891d;color:#091127;padding:16px 25px;border-radius:30px;font-weight:900;box-shadow:0 0 24px #ff891d66">VIEW PILOT DETAILS &amp; APPLY</a>
-  </div>
-  <p style="font-size:12px;color:#d0c8e9;margin:12px 0 0">Amoy testnet technical assistance · Final scope and price agreed before payment · Not a token sale</p>
-</section>
-<section id="launch-preview-countdown" aria-label="EPIC Network launch preview countdown" style="padding:35px 18px;background:linear-gradient(135deg,#090b23,#22104d 55%,#091c43);text-align:center;border-top:1px solid #a74cff;border-bottom:1px solid #00dfff;color:white">
-  <div style="max-width:860px;margin:auto">
-    <div style="font-size:13px;letter-spacing:3px;color:#65e9ff;font-weight:800">EPIC NETWORK · ECHO PROTOCOL Z</div>
-    <h2 style="font-size:clamp(27px,5vw,48px);margin:12px 0;color:#fff;text-shadow:0 0 22px #9b4dff">LAUNCH PREVIEW COUNTDOWN</h2>
-    <p style="color:#e7d6ff;margin:0 0 20px">November 15, 2026 · 3:00 PM PST</p>
-    <div id="epic-live-countdown" role="timer" aria-label="Time remaining until launch preview" style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
-      <div style="min-width:105px;padding:16px;border:1px solid #bb4aff;border-radius:14px;background:#0a153d"><strong id="epic-days" style="display:block;font-size:clamp(34px,6vw,56px);color:#fff">--</strong><span>DAYS</span></div>
-      <div style="min-width:105px;padding:16px;border:1px solid #00dfff;border-radius:14px;background:#0a153d"><strong id="epic-hours" style="display:block;font-size:clamp(34px,6vw,56px);color:#fff">--</strong><span>HOURS</span></div>
-      <div style="min-width:105px;padding:16px;border:1px solid #bb4aff;border-radius:14px;background:#0a153d"><strong id="epic-minutes" style="display:block;font-size:clamp(34px,6vw,56px);color:#fff">--</strong><span>MINUTES</span></div>
-      <div style="min-width:105px;padding:16px;border:1px solid #00dfff;border-radius:14px;background:#0a153d"><strong id="epic-seconds" style="display:block;font-size:clamp(34px,6vw,56px);color:#fff">--</strong><span>SECONDS</span></div>
-    </div>
-    <p id="epic-countdown-message" style="color:#8defff;margin-top:18px;font-weight:700">Security verification in progress · final release test results pending</p>
-    <p style="font-size:12px;color:#b8b9d6;max-width:690px;margin:12px auto 0">Countdown to the announced preview milestone, not a token sale or authorization to deploy. Echo Protocol Z Mainnet release remains subject to security review and an independent audit.</p>
-  </div>
-</section>
-<script>
-(function () {
-  // November 15, 2026 15:00 PST = 23:00 UTC; fixed instant works in every visitor timezone.
-  const deadline = Date.parse('2026-11-15T15:00:00-08:00');
-  const ids = ['epic-days','epic-hours','epic-minutes','epic-seconds'];
-  function update() {
-    const remaining = Math.max(0, deadline - Date.now());
-    const units = [Math.floor(remaining / 86400000),Math.floor(remaining / 3600000) % 24,Math.floor(remaining / 60000) % 60,Math.floor(remaining / 1000) % 60];
-    ids.forEach((id,i) => { document.getElementById(id).textContent = String(units[i]).padStart(2,'0'); });
-    if (remaining === 0) document.getElementById('epic-countdown-message').textContent = 'The November 15 preview milestone has arrived — check official updates for confirmed announcements.';
-  }
-  update();
-  setInterval(update, 1000);
-})();
-</script>
-
-<section id="mainnet-progress-banner" style="padding:28px 20px;background:linear-gradient(100deg,#071d3a,#1b1245);border-top:1px solid #00dcff66;border-bottom:1px solid #a843ff66;text-align:center">
-  <div style="max-width:980px;margin:auto">
-    <div style="font-size:12px;font-weight:800;letter-spacing:3px;color:#00dcff">ECHO PROTOCOL Z · MAINNET PROGRESS</div>
-    <h2 style="font-size:clamp(24px,4vw,38px);margin:12px 0">Pre-deployment security testing</h2>
-    <p style="color:#cbd9ff;line-height:1.7">V3/V4 proof authorization, local staking, and cumulative spending-limit tests have passed. ERC-20 allowance hardening and final security review remain in progress. Launch preview: November 15, 2026 at 3:00 PM PST. Mainnet deployment remains subject to security review.</p>
-    <a href="mainnet-status.html" style="display:inline-block;border:1px solid #00dcff;border-radius:30px;padding:13px 23px;margin-top:8px;color:#fff;background:#00bfff20;font-weight:bold;text-decoration:none">VIEW MAINNET STATUS &amp; DEVELOPMENT LOG</a>
-    <p style="font-size:12px;color:#9fb4db;margin-bottom:0">Last updated November 9, 2026 · No Echo Protocol Z Mainnet launch announced</p>
-  </div>
-</section>
-
-
-
 <div class="hero" id="home">
 <div class="hero-content">
 <div class="orbit"><span>E</span></div>
@@ -894,6 +844,74 @@ footer{padding:35px 24px;text-align:center;border-top:1px solid #244b88;color:#9
 </div>
 
 
+<section id="launch-preview-countdown" aria-label="EPIC Network launch preview countdown" style="padding:35px 18px;background:linear-gradient(135deg,#090b23,#22104d 55%,#091c43);text-align:center;border-top:1px solid #a74cff;border-bottom:1px solid #00dfff;color:white">
+  <div style="max-width:860px;margin:auto">
+    <div style="font-size:13px;letter-spacing:3px;color:#65e9ff;font-weight:800">EPIC NETWORK · ECHO PROTOCOL Z</div>
+    <h2 style="font-size:clamp(27px,5vw,48px);margin:12px 0;color:#fff;text-shadow:0 0 22px #9b4dff">LAUNCH PREVIEW COUNTDOWN</h2>
+    <p style="color:#e7d6ff;margin:0 0 20px">November 15, 2026 · 3:00 PM PST</p>
+    <div id="epic-live-countdown" role="timer" aria-label="Time remaining until launch preview" style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px">
+      <div style="min-width:105px;padding:16px;border:1px solid #bb4aff;border-radius:14px;background:#0a153d"><strong id="epic-days" style="display:block;font-size:clamp(34px,6vw,56px);color:#fff">--</strong><span>DAYS</span></div>
+      <div style="min-width:105px;padding:16px;border:1px solid #00dfff;border-radius:14px;background:#0a153d"><strong id="epic-hours" style="display:block;font-size:clamp(34px,6vw,56px);color:#fff">--</strong><span>HOURS</span></div>
+      <div style="min-width:105px;padding:16px;border:1px solid #bb4aff;border-radius:14px;background:#0a153d"><strong id="epic-minutes" style="display:block;font-size:clamp(34px,6vw,56px);color:#fff">--</strong><span>MINUTES</span></div>
+      <div style="min-width:105px;padding:16px;border:1px solid #00dfff;border-radius:14px;background:#0a153d"><strong id="epic-seconds" style="display:block;font-size:clamp(34px,6vw,56px);color:#fff">--</strong><span>SECONDS</span></div>
+    </div>
+    <p id="epic-countdown-message" style="color:#8defff;margin-top:18px;font-weight:700">Security verification in progress · final release test results pending</p>
+    <p style="font-size:12px;color:#b8b9d6;max-width:690px;margin:12px auto 0">Countdown to the announced preview milestone, not a token sale or authorization to deploy. Echo Protocol Z Mainnet release remains subject to security review and an independent audit.</p>
+  </div>
+</section>
+<script>
+(function () {
+  // November 15, 2026 15:00 PST = 23:00 UTC; fixed instant works in every visitor timezone.
+  const deadline = Date.parse('2026-11-15T15:00:00-08:00');
+  const ids = ['epic-days','epic-hours','epic-minutes','epic-seconds'];
+  function update() {
+    const remaining = Math.max(0, deadline - Date.now());
+    const units = [Math.floor(remaining / 86400000),Math.floor(remaining / 3600000) % 24,Math.floor(remaining / 60000) % 60,Math.floor(remaining / 1000) % 60];
+    ids.forEach((id,i) => { document.getElementById(id).textContent = String(units[i]).padStart(2,'0'); });
+    if (remaining === 0) document.getElementById('epic-countdown-message').textContent = 'The November 15 preview milestone has arrived — check official updates for confirmed announcements.';
+  }
+  update();
+  setInterval(update, 1000);
+})();
+</script>
+
+<section id="founding-developer-pilot" aria-labelledby="pilot-title" style="padding:80px 20px;background:linear-gradient(145deg,#080e2b,#1b1245 55%,#071c38);border-top:1px solid #344b93;border-bottom:1px solid #344b93">
+  <div class="wrap" style="max-width:900px;margin:auto;text-align:center">
+    <div class="section-label">DEVELOPER OPPORTUNITY · AMOY TESTNET</div>
+    <h2 id="pilot-title">BUILD WITH <span style="color:#00dcff">ECHO PROTOCOL Z</span></h2>
+    <p class="lead" style="margin:0 auto 24px">Explore proof-based authorization and geographic policy workflows with a guided Polygon Amoy testnet demonstration. We're inviting developers and Web3 teams to discuss early integration pilots.</p>
+    <div style="max-width:570px;margin:30px auto;padding:26px 20px;border:2px solid #ff891d;border-radius:22px;background:linear-gradient(135deg,#22143b,#111d49);box-shadow:0 0 36px #ff891d55;text-align:center">
+      <p style="font-size:13px;font-weight:800;letter-spacing:2px;color:#ffbd7b;margin:0 0 12px">FOUNDING DEVELOPER PILOT · PROPOSED STARTING PRICE</p>
+      <p style="font-size:clamp(52px,10vw,82px);font-weight:900;line-height:1;margin:0;color:#fff;text-shadow:0 0 28px #ff891d">$199</p>
+      <p style="font-size:18px;font-weight:800;color:#fff;margin:12px 0 22px">ONE-TIME · SCOPED TECHNICAL ASSISTANCE</p>
+      <a class="btn orange" style="display:inline-block;background:#ff891d;color:#080b20;border-color:#ffb16c;box-shadow:0 0 24px #ff891d77" href="mailto:echoprotocolZ1@gmail.com?subject=EPIC%20Network%20-%20Founding%20Developer%20Pilot%20Inquiry&amp;body=Hello%20EPIC%20Network%2C%0A%0AI%27m%20interested%20in%20a%20developer%20pilot.%0A%0AProject%20name%3A%0AUse%20case%3A%0AContact%20email%3A%0A">REQUEST A PILOT</a>
+      <p style="font-size:12px;color:#c9d1f0;margin:18px 0 0">Inquiry only. Scope and final price confirmed before any payment.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:28px 0;text-align:left">
+      <div class="feature" style="padding:24px"><h3 style="font-size:20px">Free discovery call</h3><p>Discuss your use case, integration requirements, and whether the current testnet implementation is a fit.</p></div>
+      <div class="feature" style="padding:24px"><h3 style="font-size:20px">Guided Amoy demo</h3><p>Review the testnet proof-verification and authorization flow, current limitations, and public development work.</p></div>
+      <div class="feature" style="padding:24px"><h3 style="font-size:20px">Paid integration pilot</h3><p>Proposed starting price: <strong>$199 one-time</strong> for a scoped technical assistance package, subject to a written agreement on deliverables.</p></div>
+    </div>
+    <div class="actions">
+      <a class="btn orange" href="mailto:echoprotocolZ1@gmail.com?subject=EPIC%20Network%20-%20Founding%20Developer%20Pilot%20Inquiry&amp;body=Hello%20EPIC%20Network%2C%0A%0AI%27m%20interested%20in%20a%20developer%20pilot.%0A%0AProject%20name%3A%0AUse%20case%3A%0AContact%20email%3A%0A">REQUEST A PILOT</a>
+      <a class="btn" href="https://github.com/echoprotocolZ" target="_blank" rel="noopener noreferrer">EXPLORE THE CODE</a>
+    </div>
+    <p style="font-size:12px;color:#b8b9d6;max-width:740px;margin:25px auto 0">Testnet demonstration and development assistance only. Production mainnet functionality is not offered as audited or ready for customer funds. No token purchase, investment return, or future access is promised. No payment is collected on this page.</p>
+  </div>
+</section>
+
+<section id="mainnet-progress-banner" style="padding:28px 20px;background:linear-gradient(100deg,#071d3a,#1b1245);border-top:1px solid #00dcff66;border-bottom:1px solid #a843ff66;text-align:center">
+  <div style="max-width:980px;margin:auto">
+    <div style="font-size:12px;font-weight:800;letter-spacing:3px;color:#00dcff">ECHO PROTOCOL Z · MAINNET PROGRESS</div>
+    <h2 style="font-size:clamp(24px,4vw,38px);margin:12px 0">Pre-deployment security testing</h2>
+    <p style="color:#cbd9ff;line-height:1.7">V3/V4 proof authorization, local staking, and cumulative spending-limit tests have passed. ERC-20 allowance hardening and final security review remain in progress. Launch preview: November 15, 2026 at 3:00 PM PST. Mainnet deployment remains subject to security review.</p>
+    <a href="mainnet-status.html" style="display:inline-block;border:1px solid #00dcff;border-radius:30px;padding:13px 23px;margin-top:8px;color:#fff;background:#00bfff20;font-weight:bold;text-decoration:none">VIEW MAINNET STATUS &amp; DEVELOPMENT LOG</a>
+    <p style="font-size:12px;color:#9fb4db;margin-bottom:0">Last updated November 9, 2026 · No Echo Protocol Z Mainnet launch announced</p>
+  </div>
+</section>
+
+
+
 <div class="cta-band">
   <div class="actions">
     <a class="btn" href="#about">EXPLORE THE VISION</a>
@@ -1053,7 +1071,7 @@ VIEW OUR GITHUB
 
 <footer>
 <strong>EPIC NETWORK — POWERED BY ECHO</strong>
-<p>Project status: In development. EPIC Network is not yet live. No public launch date or token sale has been announced.</p>
+<p>Project status: In development. Public launch preview scheduled for November 15, 2026. No token sale announced; production mainnet remains subject to security review.</p>
 <p>© 2026 EPIC Network. All rights reserved.</p>
 </footer>
 
@@ -1067,31 +1085,6 @@ VIEW OUR GITHUB
 </section>
 
 
-
-<section id="founding-developer-pilot" aria-labelledby="pilot-title" style="padding:80px 20px;background:linear-gradient(145deg,#080e2b,#1b1245 55%,#071c38);border-top:1px solid #344b93;border-bottom:1px solid #344b93">
-  <div class="wrap" style="max-width:900px;margin:auto;text-align:center">
-    <div class="section-label">DEVELOPER OPPORTUNITY · AMOY TESTNET</div>
-    <h2 id="pilot-title">BUILD WITH <span style="color:#00dcff">ECHO PROTOCOL Z</span></h2>
-    <p class="lead" style="margin:0 auto 24px">Explore proof-based authorization and geographic policy workflows with a guided Polygon Amoy testnet demonstration. We're inviting developers and Web3 teams to discuss early integration pilots.</p>
-    <div style="max-width:570px;margin:30px auto;padding:26px 20px;border:2px solid #ff891d;border-radius:22px;background:linear-gradient(135deg,#22143b,#111d49);box-shadow:0 0 36px #ff891d55;text-align:center">
-      <p style="font-size:13px;font-weight:800;letter-spacing:2px;color:#ffbd7b;margin:0 0 12px">FOUNDING DEVELOPER PILOT · PROPOSED STARTING PRICE</p>
-      <p style="font-size:clamp(52px,10vw,82px);font-weight:900;line-height:1;margin:0;color:#fff;text-shadow:0 0 28px #ff891d">$199</p>
-      <p style="font-size:18px;font-weight:800;color:#fff;margin:12px 0 22px">ONE-TIME · SCOPED TECHNICAL ASSISTANCE</p>
-      <a class="btn orange" style="display:inline-block;background:#ff891d;color:#080b20;border-color:#ffb16c;box-shadow:0 0 24px #ff891d77" href="mailto:echoprotocolZ1@gmail.com?subject=EPIC%20Network%20-%20Founding%20Developer%20Pilot%20Inquiry&amp;body=Hello%20EPIC%20Network%2C%0A%0AI%27m%20interested%20in%20a%20developer%20pilot.%0A%0AProject%20name%3A%0AUse%20case%3A%0AContact%20email%3A%0A">REQUEST A PILOT</a>
-      <p style="font-size:12px;color:#c9d1f0;margin:18px 0 0">Inquiry only. Scope and final price confirmed before any payment.</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:28px 0;text-align:left">
-      <div class="feature" style="padding:24px"><h3 style="font-size:20px">Free discovery call</h3><p>Discuss your use case, integration requirements, and whether the current testnet implementation is a fit.</p></div>
-      <div class="feature" style="padding:24px"><h3 style="font-size:20px">Guided Amoy demo</h3><p>Review the testnet proof-verification and authorization flow, current limitations, and public development work.</p></div>
-      <div class="feature" style="padding:24px"><h3 style="font-size:20px">Paid integration pilot</h3><p>Proposed starting price: <strong>$199 one-time</strong> for a scoped technical assistance package, subject to a written agreement on deliverables.</p></div>
-    </div>
-    <div class="actions">
-      <a class="btn orange" href="mailto:echoprotocolZ1@gmail.com?subject=EPIC%20Network%20-%20Founding%20Developer%20Pilot%20Inquiry&amp;body=Hello%20EPIC%20Network%2C%0A%0AI%27m%20interested%20in%20a%20developer%20pilot.%0A%0AProject%20name%3A%0AUse%20case%3A%0AContact%20email%3A%0A">REQUEST A PILOT</a>
-      <a class="btn" href="https://github.com/echoprotocolZ" target="_blank" rel="noopener noreferrer">EXPLORE THE CODE</a>
-    </div>
-    <p style="font-size:12px;color:#b8b9d6;max-width:740px;margin:25px auto 0">Testnet demonstration and development assistance only. Production mainnet functionality is not offered as audited or ready for customer funds. No token purchase, investment return, or future access is promised. No payment is collected on this page.</p>
-  </div>
-</section>
 
 <section id="join" style="padding:65px 20px;text-align:center;">
   <h2>JOIN THE EPIC NETWORK</h2>
