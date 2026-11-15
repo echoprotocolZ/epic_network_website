@@ -573,7 +573,7 @@ footer{padding:35px 24px;text-align:center;border-top:1px solid #244b88;color:#9
 .hero#home .poster-hero{display:block;position:relative;width:100%;aspect-ratio:16/9;background-image:url("echo-reveal-image.png");background-size:contain;background-position:center;background-repeat:no-repeat;background-color:#05091b}
 .hero#home .hero-content,.hero#home .network-horizon,.hero#home .duo,.hero#home .duo-art{display:none!important}
 @media(max-width:700px){.hero#home .poster-hero{aspect-ratio:16/9;min-height:0;background-size:contain}.hero#home{min-height:0!important}}
-</style>
+.hero#home .poster-hero{display:flex!important;align-items:center;justify-content:center;width:100%;min-height:300px;aspect-ratio:16/9;background:#080d29!important;position:relative}.hero#home .poster-hero img{width:100%;height:auto;max-height:95vh;object-fit:contain;display:block;position:relative;z-index:2}.poster-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#d7c5ff;font-weight:900;font-size:clamp(20px,4vw,50px);text-align:center;padding:30px;text-shadow:0 0 20px #854cff}@media(max-width:700px){.hero#home .poster-hero{min-height:200px;aspect-ratio:auto}.hero#home .poster-hero img{max-height:none}}</style>
 </head>
 <body>
 <header>
@@ -596,7 +596,7 @@ footer{padding:35px 24px;text-align:center;border-top:1px solid #244b88;color:#9
 
 <main>
 <div class="hero" id="home">
-<div class="poster-hero" role="img" aria-label="Echo Protocol Z project reveal poster featuring two hooded figures, blue and purple neon, and 3 PM Pacific event details"></div><div class="hero-content">
+<div class="poster-hero"><img src="echo-reveal-image.png?v=20261115b" alt="Echo Protocol Z project reveal poster with two hooded figures" loading="eager" fetchpriority="high"><div class="poster-fallback">ECHO PROTOCOL Z · PROJECT REVEAL · 3 PM PACIFIC</div></div><div class="hero-content">
 <div class="orbit"><span>E</span></div>
 <div class="eyebrow">THE NEXT CHAPTER OF BLOCKCHAIN</div>
 <h1>PROJECT REVEAL<br><em>&amp; EARLY ACCESS</em></h1>
